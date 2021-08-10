@@ -149,3 +149,39 @@ func TestBoldItalicSerif(t *testing.T) {
 		}
 	}
 }
+
+func TestCursive(t *testing.T) {
+	var tests = []struct {
+		input string
+		want  string
+	}{
+		{"", ""},
+		{"\n", "\n"},
+		{"a", "𝒶"},
+		{"A", "𝒜"},
+		{"Hello, 世界", "ℋℯ𝓁𝓁ℴ, 世界"},
+	}
+	for _, test := range tests {
+		if got := Cursive(test.input); got != test.want {
+			t.Errorf("Cursive(%q) = %v", test.input, got)
+		}
+	}
+}
+
+func TestFraktur(t *testing.T) {
+	var tests = []struct {
+		input string
+		want  string
+	}{
+		{"", ""},
+		{"\n", "\n"},
+		{"a", "𝔞"},
+		{"A", "𝔄"},
+		{"Hello, 世界", "ℌ𝔢𝔩𝔩𝔬, 世界"},
+	}
+	for _, test := range tests {
+		if got := Fraktur(test.input); got != test.want {
+			t.Errorf("Fraktur(%q) = %v", test.input, got)
+		}
+	}
+}

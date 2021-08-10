@@ -124,3 +124,49 @@ func BoldItalicSerif(s string) string {
 	}
 	return offsetRune(s, offsets)
 }
+
+// Cursive modifies a unicode string to replace ASCII characters with their
+// cursive version.
+func Cursive(s string) string {
+	offsets := []Offset{
+		{'A', 'A', '𝒜'},
+		{'B', 'B', 'ℬ'},
+		{'C', 'D', '𝒞'},
+		{'E', 'F', 'ℰ'},
+		{'G', 'G', '𝒢'},
+		{'H', 'H', 'ℋ'},
+		{'I', 'I', 'ℐ'},
+		{'J', 'K', '𝒥'},
+		{'L', 'L', 'ℒ'},
+		{'M', 'M', 'ℳ'},
+		{'N', 'Q', '𝒩'},
+		{'R', 'R', 'ℛ'},
+		{'S', 'Z', '𝒮'},
+		{'a', 'd', '𝒶'},
+		{'e', 'e', 'ℯ'},
+		{'f', 'f', '𝒻'},
+		{'g', 'g', 'ℊ'},
+		{'h', 'n', '𝒽'},
+		{'o', 'o', 'ℴ'},
+		{'p', 'z', '𝓅'},
+	}
+	return offsetRune(s, offsets)
+}
+
+// Fraktur modifies a unicode string to replace ASCII characters with their
+// fraktur version.
+func Fraktur(s string) string {
+	offset := []Offset{
+		{'A', 'B', '𝔄'},
+		{'C', 'C', 'ℭ'},
+		{'D', 'G', '𝔇'},
+		{'H', 'H', 'ℌ'},
+		{'I', 'I', 'ℑ'},
+		{'J', 'Q', '𝔍'},
+		{'R', 'R', 'ℜ'},
+		{'S', 'Y', '𝔖'},
+		{'Z', 'Z', 'ℨ'},
+		{'a', 'z', '𝔞'},
+	}
+	return offsetRune(s, offset)
+}
