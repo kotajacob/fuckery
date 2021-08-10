@@ -150,6 +150,24 @@ func TestBoldItalicSerif(t *testing.T) {
 	}
 }
 
+func TestDouble(t *testing.T) {
+	var tests = []struct {
+		input string
+		want  string
+	}{
+		{"", ""},
+		{"\n", "\n"},
+		{"a", "𝕒"},
+		{"A", "𝔸"},
+		{"Hello, 世界", "ℍ𝕖𝕝𝕝𝕠, 世界"},
+	}
+	for _, test := range tests {
+		if got := Double(test.input); got != test.want {
+			t.Errorf("Double(%q) = %v", test.input, got)
+		}
+	}
+}
+
 func TestCursive(t *testing.T) {
 	var tests = []struct {
 		input string
