@@ -30,6 +30,6 @@ func Strike(s string) string {
 
 // Underline modifies a unicode string to insert a diacritical underline after
 // non newline runes.
-func Underline(text string) string {
-	return appendRune(text, rune(UnderlineRune))
+func Underline(s string) string {
+	return appendRune(s, rune(UnderlineRune))
 }
