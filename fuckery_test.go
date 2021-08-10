@@ -11,9 +11,10 @@ func TestStrike(t *testing.T) {
 	}{
 		{"", ""},
 		{"\n", "\n"},
-		{"a", "a̶"},
-		{"A", "A̶"},
-		{"Hello World", "H̶e̶l̶l̶o̶ ̶W̶o̶r̶l̶d̶"},
+		{"a", "a\u0336"},
+		{"A", "A\u0336"},
+		{"Hello, 世界",
+			"H\u0336e\u0336l\u0336l\u0336o\u0336,\u0336 \u0336世\u0336界\u0336"},
 	}
 	for _, test := range tests {
 		if got := Strike(test.input); got != test.want {
@@ -29,9 +30,10 @@ func TestUnderline(t *testing.T) {
 	}{
 		{"", ""},
 		{"\n", "\n"},
-		{"a", "a̲"},
-		{"A", "A̲"},
-		{"Hello World", "H̲e̲l̲l̲o̲ ̲W̲o̲r̲l̲d̲"},
+		{"a", "a\u0332"},
+		{"A", "A\u0332"},
+		{"Hello, 世界",
+			"H\u0332e\u0332l\u0332l\u0332o\u0332,\u0332 \u0332世\u0332界\u0332"},
 	}
 	for _, test := range tests {
 		if got := Underline(test.input); got != test.want {
