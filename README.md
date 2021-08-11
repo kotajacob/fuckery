@@ -1,5 +1,7 @@
 # fuckery - General unicode tomfoolery.
 
+[![godocs.io](https://godocs.io/git.sr.ht/~kota/fuckery?status.svg)](https://godocs.io/git.sr.ht/~kota/fuckery)
+
 Fuckery is a go library and cli tool for applying those 𝓌ℯ𝒾𝓇𝒹 𝕦𝕟𝕚𝕔𝕠𝕕𝕖 𝒔𝒕𝒚𝒍𝒆𝒔 to
 text. Your terminal's stdout may trim some of the styles, try printing to a file
 if you have issues.
