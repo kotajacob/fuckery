@@ -33,7 +33,7 @@ Build dependencies:
 Optionally configure `config.mk` to specify a different install location.  
 Defaults to `/usr/local/`
 
-`sudo make all`
+`sudo make install`
 
 ## Uninstall
 
