@@ -10,8 +10,11 @@ import (
 	"git.sr.ht/~kota/fuckery"
 )
 
+var Version string
+
 func usage() {
-	log.Fatal(`fuckery [style]
+	log.Println("fuckery v" + Version)
+	log.Fatal(`usage: fuckery [style]
 
 styles:
 	Strike
