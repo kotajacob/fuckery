@@ -10,7 +10,17 @@ fuckery - General unicode tomfoolery.
 
 # STYLES
 
-
+- Strike
+- Underline
+- BoldSans
+- BoldSerif
+- ItalicSans
+- ItalicSerif
+- BoldItalicSans
+- BoldItalicSerif
+- Double
+- Cursive
+- Fraktur
 
 # AUTHORS
 
