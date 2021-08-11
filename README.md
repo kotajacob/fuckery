@@ -10,17 +10,17 @@ Fuckery reads from stdin and prints to stdout.
 fuckery [style]
 
 styles:
-	* Strike
-	* Underline
-	* BoldSans
-	* BoldSerif
-	* ItalicSans
-	* ItalicSerif
-	* BoldItalicSans
-	* BoldItalicSerif
-	* Double
-	* Cursive
-	* Fraktur
+ * Strike
+ * Underline
+ * BoldSans
+ * BoldSerif
+ * ItalicSans
+ * ItalicSerif
+ * BoldItalicSans
+ * BoldItalicSerif
+ * Double
+ * Cursive
+ * Fraktur
 
 ## Build and Install
 
