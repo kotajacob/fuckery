@@ -1,7 +1,8 @@
 # fuckery - General unicode tomfoolery.
 
 Fuckery is a go library and cli tool for applying those 𝓌ℯ𝒾𝓇𝒹 𝕦𝕟𝕚𝕔𝕠𝕕𝕖 𝒔𝒕𝒚𝒍𝒆𝒔 to
-text.
+text. Your terminal's stdout may trim some of the styles, try printing to a file
+if you have issues.
 
 ## Usage
 
@@ -21,6 +22,7 @@ styles:
  * 𝔻𝕠𝕦𝕓𝕝𝕖
  * 𝒞𝓊𝓇𝓈𝒾𝓋ℯ
  * 𝔉𝔯𝔞𝔨𝔱𝔲𝔯
+ * Z̸̜͇̑̂̓͂a̵̴̜̽ͬͫͅl͚͍̔̀̂ͫ͜g̩ͮ̈͐̒́͏ò̷̗̊͛̀͛ ̲̣̔̈́̅̒͢7͍̣̹̝̌̏͞ (Zalgo 7 -- greater numbers have more zalg)
 
 ## Build and Install
 

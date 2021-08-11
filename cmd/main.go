@@ -5,7 +5,10 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"math/rand"
 	"os"
+	"strconv"
+	"time"
 
 	"git.sr.ht/~kota/fuckery"
 )
@@ -27,7 +30,8 @@ styles:
 	BoldItalicSerif
 	Double
 	Cursive
-	Fraktur`)
+	Fraktur
+	Zalgo NUMBER`)
 }
 
 func main() {
@@ -36,7 +40,7 @@ func main() {
 	log.SetFlags(0)
 	flag.Parse()
 	args := flag.Args()
-	if len(args) == 1 {
+	if len(args) >= 1 {
 		style = args[0]
 	} else {
 		usage()
@@ -96,6 +100,22 @@ func main() {
 		scanner := bufio.NewScanner(os.Stdin)
 		for scanner.Scan() {
 			fmt.Println(fuckery.Fraktur(scanner.Text()))
+		}
+	case "Zalgo":
+		var zal int
+		var err error
+		if len(args) >= 2 {
+			zal, err = strconv.Atoi(args[1])
+			if err != nil {
+				usage()
+			}
+		} else {
+			usage()
+		}
+		scanner := bufio.NewScanner(os.Stdin)
+		r := rand.New(rand.NewSource(time.Now().UnixNano()))
+		for scanner.Scan() {
+			fmt.Println(fuckery.Zalgo(scanner.Text(), r, zal))
 		}
 	default:
 		log.Println("unknown style")

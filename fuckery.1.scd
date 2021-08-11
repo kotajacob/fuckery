@@ -21,6 +21,7 @@ fuckery - General unicode tomfoolery.
 - Double
 - Cursive
 - Fraktur
+- Zalgo 7 (greater numbers have more zalg)
 
 # AUTHORS
 

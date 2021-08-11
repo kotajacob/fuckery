@@ -1,6 +1,7 @@
 package fuckery
 
 import (
+	"math/rand"
 	"strings"
 )
 
@@ -32,6 +33,23 @@ func Strike(s string) string {
 // non newline runes.
 func Underline(s string) string {
 	return appendRune(s, rune(UnderlineRune))
+}
+
+// Zalgo does horrific things to a unicode string. Make sure to seed it :)
+// r := rand.New(rand.NewSource(time.Now().UnixNano()))
+func Zalgo(s string, r *rand.Rand, zal int) string {
+	var b strings.Builder
+	b.Grow(len(s) * 30)
+	for _, c := range s {
+		b.WriteRune(c)
+		if c != '\n' {
+			// create random diacriticals
+			for i := 0; i < zal; i++ {
+				b.WriteRune('\u0300' + r.Int31n(111))
+			}
+		}
+	}
+	return b.String()
 }
 
 // Offset represents a range of runes that can be shifted by a certain number
